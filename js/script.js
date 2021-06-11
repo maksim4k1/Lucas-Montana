@@ -23,3 +23,24 @@ function toggleInfoModal() {
     infoModal.classList.toggle("open-modal");
     document.body.classList.toggle("body-overflow");
 }
+
+
+// PORTFOLIO
+const portfolioModal = document.querySelector(".portfolio__modal")
+const images = document.querySelectorAll(".portfolio__list");
+const modalImage = document.querySelector(".portfolio__modal-image");
+const closeModalButton = document.querySelector("#closeModal")
+for(let i of images){
+    i.addEventListener("click", togglePortfolioModal);
+}
+closeModalButton.addEventListener("click", togglePortfolioModal);
+portfolioModal.addEventListener("click", function (event) {
+    if(event.target === event.currentTarget) togglePortfolioModal();
+})
+function togglePortfolioModal(event) {
+    portfolioModal.classList.toggle("open-modal");
+    document.body.classList.toggle("body-overflow");
+    if(event.target !== closeModalButton && event.target !== document.querySelector(".portfolio__list")){
+        modalImage.childNodes[0].setAttribute("src", event.target.childNodes[0].getAttribute("src"));
+    }
+}
