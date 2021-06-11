@@ -39,4 +39,7 @@ portfolioModal.addEventListener("click", function (event) {
 function togglePortfolioModal(event) {
     portfolioModal.classList.toggle("open-modal");
     document.body.classList.toggle("body-overflow");
+    if(event.target !== closeModalButton && event.target !== document.querySelector(".portfolio__list")){
+        modalImage.childNodes[0].setAttribute("src", event.target.childNodes[0].getAttribute("src"));
+    }
 }
