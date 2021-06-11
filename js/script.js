@@ -8,6 +8,11 @@ infoModal.addEventListener("click", function (event) {
 })
 sendMessageButton.addEventListener("click", function (event) {
     event.preventDefault();
+    let inputs = document.querySelectorAll(".info__input");
+    for(let i of inputs){
+        if(i.value.length < 2) return;
+    }
+
     let name = infoModal.querySelector("#name");
     let email = infoModal.querySelector("#email");
     let message = infoModal.querySelector("#message");
