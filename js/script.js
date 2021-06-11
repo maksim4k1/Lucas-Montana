@@ -16,7 +16,7 @@ sendMessageButton.addEventListener("click", function (event) {
     let name = infoModal.querySelector("#name");
     let email = infoModal.querySelector("#email");
     let message = infoModal.querySelector("#message");
-    console.log(`Username: ${name.value}\nEmail: ${email.value}\nMessage: ${message.value}`)
+    console.log({username: name.value, email: email.value, message: message.value});
     toggleInfoModal();
 })
 function toggleInfoModal() {
