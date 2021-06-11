@@ -246,3 +246,38 @@
     font-weight: 500;
     background: var(--main-bg-dark-blue);
 }
+
+/* Tablet */
+@media screen and (max-width: 918px) {
+    .header__title{
+        padding: 0 10px 0 0;
+    }
+    .info{
+        margin: 0 0 53px;
+    }
+    .info__container{
+        display: block;
+    }
+    .info__image{
+        width: 100%;
+        height: 355px;
+        min-width: 100%;
+        margin: 0 0 65px;
+        overflow: hidden;
+    }
+    .info__image img{
+        width: 100%;
+    }
+    .portfolio{
+        margin: 0 0 51px;
+    }
+    .portfolio__list{
+        grid-gap: 15px;
+    }
+    .footer__content{
+        margin: 0 0 -2px;
+    }
+    .footer__content, .footer__license{
+        padding: 0;
+    }
+}
