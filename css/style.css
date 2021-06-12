@@ -283,6 +283,14 @@
 }
 
 /* MOBILE */
+@media screen and (max-width: 600px) {
+    .info__inputs{
+        grid-template-columns: 1fr;
+    }
+    .info__textarea{
+        grid-column: 1/2;
+    }
+}
 @media screen and (max-width: 500px) {
     .info{
         margin: 0 0 38px;
