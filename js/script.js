@@ -1,10 +1,12 @@
-const infoModal = document.querySelector(".info__modal");
-const openModalButton = document.querySelector("#openModal");
-const sendMessageButton = document.querySelector("#sendMessage");
-openModalButton.addEventListener("click", toggleInfoModal);
+infoModal = document.querySelector(".info__modal");
+openModalButton = document.getElementById("openModal");
+sendMessageButton = document.getElementById("sendMessage");
 infoModal.addEventListener("click", function (event) {
-    if(event.target === event.currentTarget) toggleInfoModal();
-})
+    if(event.target === event.currentTarget){
+        toggleInfoModal();
+    }
+});
+openModalButton.addEventListener("click", toggleInfoModal);
 sendMessageButton.addEventListener("click", function (event) {
     event.preventDefault();
     let inputs = document.querySelectorAll(".info__input");
@@ -12,10 +14,10 @@ sendMessageButton.addEventListener("click", function (event) {
         if(i.value.length < 2) return;
     }
 
-    let name = infoModal.querySelector("#name");
-    let email = infoModal.querySelector("#email");
-    let message = infoModal.querySelector("#message");
-    console.log({username: name.value, email: email.value, message: message.value});
+    let name = document.getElementById("name");
+    let email = document.getElementById("email");
+    let message = document.getElementById("message");
+    console.log(`Username: ${name.value}\nEmail: ${email.value}\nMessage: ${message.value}`)
     toggleInfoModal();
 })
 function toggleInfoModal() {
@@ -23,11 +25,11 @@ function toggleInfoModal() {
     document.body.classList.toggle("body-overflow");
 }
 
-
-const portfolioModal = document.querySelector(".portfolio__modal")
-const images = document.querySelectorAll(".portfolio__list");
-const modalImage = document.querySelector(".portfolio__modal-image");
-const closeModalButton = document.querySelector("#closeModal")
+// PORTFOLIO
+portfolioModal = document.querySelector(".portfolio__modal")
+images = document.querySelectorAll(".portfolio__list");
+modalImage = document.querySelector(".portfolio__modal-image");
+closeModalButton = document.getElementById("closeModal")
 for(let i of images){
     i.addEventListener("click", togglePortfolioModal);
 }
