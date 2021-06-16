@@ -1,4 +1,3 @@
-// INFO
 const infoModal = document.querySelector(".info__modal");
 const openModalButton = document.querySelector("#openModal");
 const sendMessageButton = document.querySelector("#sendMessage");
@@ -25,7 +24,6 @@ function toggleInfoModal() {
 }
 
 
-// PORTFOLIO
 const portfolioModal = document.querySelector(".portfolio__modal")
 const images = document.querySelectorAll(".portfolio__list");
 const modalImage = document.querySelector(".portfolio__modal-image");
